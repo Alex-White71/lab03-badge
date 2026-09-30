@@ -54,4 +54,4 @@ double stepTwoY = Math.Pow(stepOney, 2);
 double stepThree = stepTwoX + stepTwoY;
 double distance = Math.Sqrt(stepThree);
 
-Console.WriteLine($"Distance: {distance.ToString("F1")}");
+Console.WriteLine($"Distance: {distance.ToString("F1")} feet");
