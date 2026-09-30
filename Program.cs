@@ -24,7 +24,7 @@ string upperLastInitial = lastInitial.ToUpper();
 int lettersInLastName = lastName.Length;
 Console.WriteLine($"Name on badge: {badgeNameFirst} {badgeNameLast}");
 Console.WriteLine($"Username: {userName}");
-Console.WriteLine($"Initials: {upperFirstInitial}.{upperLastInitial}");
+Console.WriteLine($"Initials: {upperFirstInitial}.{upperLastInitial}.");
 Console.WriteLine($"Letters in last name: {lettersInLastName}");
 Console.WriteLine();
 // assigns a student ID and locker based on a random number
