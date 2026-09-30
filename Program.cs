@@ -7,8 +7,6 @@
 * and the walking distance to a first class.
 */
 // Part 1 Ask user for full name before displaying the name on badge as well as username, Initials, and letters
-using System.Security.Cryptography;
-
 Console.Write("What is your first and last name? ");
 string fullName = Console.ReadLine();
 fullName.Trim();
@@ -48,9 +46,9 @@ double classY = Convert.ToDouble(Console.ReadLine());
 Console.Write("What is your walking speed? ");
 double walkSpeed = Convert.ToDouble(Console.ReadLine());
 double stepOneX = classX - dormX;
-double stepOney = classY - dormY;
+double stepOneY = classY - dormY;
 double stepTwoX = Math.Pow(stepOneX, 2);
-double stepTwoY = Math.Pow(stepOney, 2);
+double stepTwoY = Math.Pow(stepOneY, 2);
 double stepThree = stepTwoX + stepTwoY;
 double distance = Math.Sqrt(stepThree);
 
