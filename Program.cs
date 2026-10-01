@@ -7,6 +7,10 @@
 * and the walking distance to a first class.
 */
 // Part 1 Ask user for full name before displaying the name on badge as well as username, Initials, and letters
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices.Marshalling;
+using System.Xml.Schema;
+
 Console.Write("What is your first and last name? ");
 string fullName = Console.ReadLine();
 fullName.Trim();
@@ -57,3 +61,19 @@ int minsToClass = Convert.ToInt32(timeToClassInMins);
 int secsToClass = Convert.ToInt32(timeToClassInSecs%60);
 Console.WriteLine($"Distance: {distance.ToString("F1")} feet");
 Console.WriteLine($"Walk Time {minsToClass} minutes {secsToClass} seconds");
+Console.WriteLine();
+//calculate the check digit and print the final badge
+int checkDigit = studentID%9;
+string topText = "ETSU STUDENT BADGE";
+Console.WriteLine("==================================");
+Console.WriteLine("".PadRight(8) +topText);
+Console.WriteLine("==================================");
+string name = badgeNameFirst + " " + badgeNameLast;
+Console.WriteLine("NAME".PadRight(10) + name);
+Console.WriteLine("USERNAME".PadRight(10) + userName);
+string id = studentID + "-" + checkDigit;
+Console.WriteLine("ID".PadRight(10) + id);
+Console.WriteLine("LOCKER".PadRight(10) + locker);
+string walkTo = minsToClass + " min " + secsToClass + " sec";
+Console.WriteLine("WALK".PadRight(10)+ walkTo);
+Console.WriteLine("==================================");
