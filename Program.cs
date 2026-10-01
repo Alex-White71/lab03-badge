@@ -7,10 +7,6 @@
 * and the walking distance to a first class.
 */
 // Part 1 Ask user for full name before displaying the name on badge as well as username, Initials, and letters
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices.Marshalling;
-using System.Xml.Schema;
-
 Console.Write("What is your first and last name? ");
 string fullName = Console.ReadLine();
 fullName.Trim();
